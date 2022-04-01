@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { Provider } from 'react-redux';
+
+import { store } from './redux/store';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { productsFetch } from './redux/productSlice';
+import { subtotal } from './redux/cartSlice';
 
+store.dispatch(productsFetch());
+store.dispatch(subtotal());
+
+const rootElement = document.getElementById('shop');
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </StrictMode>,
+  rootElement
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

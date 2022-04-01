@@ -1,0 +1,41 @@
+.nav-bar {
+  height: 70px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4rem;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-bar h2 {
+  font-size: 40px;
+}
+
+.nav-bag {
+  display: flex;
+  align-items: center;
+}
+
+.bag-quantity {
+  height: 25px;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: yellow;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: 700;
+  color: black;
+  margin-left: 3px;
+}
+
+.cart-icon {
+  height: 35px;
+  width: 35px;
+}
